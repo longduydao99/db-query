@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A **query-execution gateway** (package name `pg-connection-pool`; the directory is `db-query` — the mismatch is expected). Fastify + `pg` + `zod` + `pino`, TypeScript ESM (`"type": "module"`, `NodeNext`). It owns one `pg.Pool` per *logical datasource* and runs SQL on a caller's behalf under guardrails. Callers know a datasource **name** + SQL — never a connection, credentials, host, or engine. Two transports expose the same capability: HTTP (`src/server.ts`) and MCP (`src/mcp/mcp-server.ts`).
 
-The `README.md` (~500 lines) is the authoritative rationale for every security control. This file is the map; the README is the reasoning. Prefer linking to it over restating it.
+`docs/security-and-operations.md` is the authoritative rationale for every security control; `README.md` is the concise quick start that links into it. This file is the code map. Prefer linking to the security doc over restating it.
 
 ## Commands
 
